@@ -1,0 +1,30 @@
+:host {
+    width: 100%;
+}
+
+.div-container-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+.div-container-input input {
+    border: none;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+}
+
+.div-container-input input:focus {
+    outline: none;
+}
+
+.div-container-input * {
+    margin: 10px;
+}
+
+.img-eye{
+    cursor: pointer;
+}

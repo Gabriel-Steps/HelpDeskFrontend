@@ -1,0 +1,22 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { LoginClientPage } from './login-client-page';
+
+describe('LoginClientPage', () => {
+  let component: LoginClientPage;
+  let fixture: ComponentFixture<LoginClientPage>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [LoginClientPage],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(LoginClientPage);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

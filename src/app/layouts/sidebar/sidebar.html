@@ -1,0 +1,11 @@
+<aside class="sidebar {{visibilitySideBarClass}}">
+    <img [src]="iconSideBar" alt="Alternar menu" width="20" (click)="switchVisibility()">
+
+    @if (visibilitySideBarClass === "visible") {
+        <nav>
+            @for(botao of botoes; track botao.id){
+                <app-button-component text="{{botao.text}}" type="sidebar" icon="{{botao.icon}}" (onClick)="botao.redirect()"/>
+            }
+        </nav>
+    }
+</aside>

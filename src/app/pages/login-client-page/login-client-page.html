@@ -1,0 +1,25 @@
+<div class="div-container-page">
+    <div class="div-container-forms">
+        <h1>Seja Bem-vindo!</h1>
+        <p>Faça login para continuar</p>
+        <div class="div-container-inputs">
+            <app-input-component 
+            type="email" 
+            placeholder="Digite o seu e-mail" 
+            icon="assets/envelope.png"
+            [(value)]="email" />
+            <app-input-component 
+            type="password" 
+            placeholder="Digite a sua senha" 
+            icon="assets/key.png"
+            [(value)]="password" />
+            <p>Não tem uma conta? <a (click)="redirecionarParaRegister()">Cadastre-se</a></p>
+        </div>
+        <div class="div-container-buttons">
+            <app-button-component type="primary" text="Enviar" (onClick)="Login()"/>
+        </div>
+    </div>
+    <div class="div-container-image">
+        <img src="/assets/img-pages-access.png" alt="">
+    </div>
+</div>

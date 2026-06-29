@@ -1,0 +1,6 @@
+<button [class]="type" (click)="actionOnClick($event)">
+    @if(icon !== null){
+        <img [src]="icon" alt="" width="20">
+    }
+    {{text}}
+</button>

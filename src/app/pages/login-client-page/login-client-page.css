@@ -1,0 +1,71 @@
+.div-container-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.div-container-forms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(67, 154, 253);
+    gap: 15px;
+}
+
+.div-container-forms h1{
+    font-size: 45px;
+    color: #FFFFFF;
+    letter-spacing: 0.1rem;
+}
+
+.div-container-forms p{
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.div-container-inputs {
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.div-container-inputs a{
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.div-container-inputs a:hover{
+    cursor: pointer;
+}
+
+.div-container-inputs a{
+    font-weight: bold;
+}
+
+.div-container-forms,
+.div-container-image {
+    width: 50%;
+    height: 100%;
+}
+
+.div-container-buttons{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.div-container-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

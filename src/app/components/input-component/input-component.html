@@ -1,0 +1,11 @@
+<div class="div-container-input">
+    <img [src]="icon" alt="Imagem de ícone" width="25" />
+    <input 
+    [type]="type" 
+    [placeholder]="placeholder" 
+    [(ngModel)]="value" 
+    (ngModelChange)="valueChange.emit($event)"/>
+    @if(typeMemory === "password"){
+        <img [src]="iconEye" width="25" (click)="trocarIconView()" class="img-eye">
+    }
+</div>

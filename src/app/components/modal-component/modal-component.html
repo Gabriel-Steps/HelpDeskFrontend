@@ -1,0 +1,13 @@
+@if(isOpen){
+    <div class="div-container-fundo-modal">
+        <div class="div-container-modal">
+            <div class="div-container-header">
+                <h1>{{title}}</h1>
+                <h1 (click)="fechar()" class="x-close">X</h1>
+            </div>
+            <div class="div-container-body">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+}

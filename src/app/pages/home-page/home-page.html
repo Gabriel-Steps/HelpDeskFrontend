@@ -1,3 +1,16 @@
 <div class="div-container-page">
-
+    <div class="div-container-apresentacao">
+        <p>Seja Bem-vindo(a), <b>{{nome}}!</b></p>
+    </div>
+    <div class="div-container-button-add">
+        <p>Dados chamados:</p>
+        <div class="div-containter-btn">
+            <app-button-component text="ADICIONAR" type="secondary" (onClick)="invertIsOpenModalCreateCalled()"/>
+        </div>
+    </div>
 </div>
+<!-- <app-modal-component [isOpen]="isOpenModalCreateCalled" (onClosed)="invertIsOpenModalCreateCalled()" title="Criar chamado">
+    <p>Ola mundo</p>
+</app-modal-component> -->
+
+<app-modal-create-called-component [isOpen]="isOpenModalCreateCalled" [onClosedModal]="invertIsOpenModalCreateCalled" />

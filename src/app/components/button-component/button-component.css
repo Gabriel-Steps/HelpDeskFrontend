@@ -26,19 +26,19 @@ button{
 }
 
 .secondary{
-    background-color: #FFFFFF;
+    background-color: #4d4dfa;
     border: none;
-    color: rgb(77, 77, 250);
+    color: #FFFFFF;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 0.1rem;
     border-radius: 10px;
-    padding: 5px 0;
+    padding: 10px 0;
     transition: 0.3s;
 }
 
 .secondary:hover{
-    background-color: #f3f3f3;
+    background-color: #5a5afc;
     cursor: pointer;
     box-shadow: 1px 1px 5px #ffffff42;
     transition: 0.3s;

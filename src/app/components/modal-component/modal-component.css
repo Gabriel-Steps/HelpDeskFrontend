@@ -1,0 +1,49 @@
+:host{
+    width: 100%;
+}
+
+.div-container-fundo-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .div-container-modal{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid #00000046;
+        background-color: #FFFFFF;
+
+        .div-container-header{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+
+            .x-close:hover{
+                cursor: pointer;
+            }
+        }
+
+        .div-container-body{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+    }
+}

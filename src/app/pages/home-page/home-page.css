@@ -3,7 +3,28 @@
     height: 100%;
     background-color: rgb(252, 250, 247);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
+
+    .div-container-apresentacao{
+        padding: 15px;
+
+        p{
+            font-size: 30px;
+        }
+    }
+
+    .div-container-button-add{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        padding: 10px;
+
+        .div-containter-btn{
+            width: 20%;
+        }
+    }
 }

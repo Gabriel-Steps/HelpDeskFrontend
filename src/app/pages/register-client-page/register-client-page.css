@@ -73,3 +73,31 @@
     align-items: center;
     justify-content: center;
 }
+
+.div-container-image-user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+
+    .image{
+        z-index: 1;
+    }
+
+    .botao-carregar-imagem{
+        position: absolute;
+        left: 55%;
+        top: 80%;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.2); 
+    }
+}

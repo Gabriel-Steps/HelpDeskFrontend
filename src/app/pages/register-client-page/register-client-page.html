@@ -3,19 +3,22 @@
         <h1>Seja Bem-vindo!</h1>
         <p>Cadastre-se para continuar</p>
         <div class="div-container-inputs">
-            <app-preview-image-perfil-user-component [previewUrl]="previewUrl"/>
-            <input 
-            type="file"
-            #fileInput
-            accept="image/*"
-            (change)="onImageSelected($event)"
-            style="display: none;"
-            />
-            <app-button-component 
-            type="primary" 
-            text="📸 Escolher Imagem"
-            (onClick)="fileInput.click()"/>
-
+            <div class="div-container-image-user">
+                <div class="div-image">
+                    <app-preview-image-perfil-user-component [previewUrl]="previewUrl" class="image"/>
+                </div>
+                <div class="div-container-input-image">
+                    <input 
+                    type="file"
+                    #fileInput
+                    accept="image/*"
+                    (change)="onImageSelected($event)"
+                    style="display: none;"/>
+                    <button 
+                    class="botao-carregar-imagem"
+                    (click)="fileInput.click()">🖊</button>
+                </div>
+            </div>
             <app-input-component 
             type="text" 
             placeholder="Digite o seu nome" 

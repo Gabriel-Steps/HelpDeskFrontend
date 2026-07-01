@@ -7,9 +7,9 @@ button{
 }
 
 .primary{
-    background-color: transparent;
-    border: 1px solid #ffffff9d;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    border: none;
+    color: #5a5afc;
     font-weight: bold;
     font-size: 22px;
     letter-spacing: 0.1rem;
@@ -19,7 +19,7 @@ button{
 }
 
 .primary:hover{
-    background-color: #FFFFFF22;
+    background-color: #eeeded;
     box-shadow: 1px 1px 5px #ffffff42;
     transition: 0.3s;
     cursor: pointer;

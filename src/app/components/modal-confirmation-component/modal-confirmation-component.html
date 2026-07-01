@@ -1,0 +1,7 @@
+<app-modal-component [isOpen]="isOpen" [onclosed]="onClosedModal" [title]="titleModal">
+    <p>{{message}}</p>
+    <div class="div-container-rodape">
+        <app-button-component type="secondary" (onClick)="onClick()" text="Confirmar"/>
+        <app-button-component type="primary" (onClick)="onClosedModal()" text="Cancelar"/>
+    </div>
+</app-modal-component>

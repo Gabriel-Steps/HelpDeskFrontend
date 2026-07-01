@@ -3,26 +3,39 @@
         <h1>Seja Bem-vindo!</h1>
         <p>Cadastre-se para continuar</p>
         <div class="div-container-inputs">
+            <app-preview-image-perfil-user-component [previewUrl]="previewUrl"/>
+            <input 
+            type="file"
+            #fileInput
+            accept="image/*"
+            (change)="onImageSelected($event)"
+            style="display: none;"
+            />
+            <app-button-component 
+            type="primary" 
+            text="📸 Escolher Imagem"
+            (onClick)="fileInput.click()"/>
+
             <app-input-component 
             type="text" 
             placeholder="Digite o seu nome" 
             icon="assets/user.png"
-            [(value)]="name" />
+            [(value)]="userRegister.name" />
             <app-input-component 
             type="email" 
             placeholder="Digite o seu e-mail" 
             icon="assets/envelope.png"
-            [(value)]="email" />
+            [(value)]="userRegister.email" />
             <app-input-component 
             type="password" 
             placeholder="Digite a sua senha" 
             icon="assets/key.png"
-            [(value)]="password" />
+            [(value)]="userRegister.password" />
             <app-input-component 
             type="password" 
             placeholder="Digite novamente sua senha" 
             icon="assets/key.png"
-            [(value)]="confirmPassword" />
+            [(value)]="userRegister.confirmPassword" />
             <p>Já possui uma conta? <a (click)="redirecionarParaLogin()">Entre!</a></p>
         </div>
         <div class="div-container-buttons">

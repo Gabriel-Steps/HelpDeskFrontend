@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ModalComponent } from '../../../../components/modal-component/modal-component';
 import { InputComponent } from '../../../../components/input-component/input-component';
 import { ButtonComponent } from '../../../../components/button-component/button-component';

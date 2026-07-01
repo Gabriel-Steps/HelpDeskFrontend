@@ -1,3 +1,15 @@
 <app-modal-component title="Criar Chamado" [onclosed]="onClosedModal" [isOpen]="isOpen">
-
+    <app-input-component 
+    icon="assets/text.png"
+    type="text"
+    placeholder="Digite o título do chamado"
+    [(value)]="createCalled.title"/>
+    <app-input-component 
+    icon="assets/poll-h.png"
+    type="text"
+    placeholder="Digite a descrição do chamado"
+    [(value)]="createCalled.description"/>
+    <div class="div-container-rodape">
+    
+    </div>
 </app-modal-component>

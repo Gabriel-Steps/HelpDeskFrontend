@@ -3,6 +3,7 @@ import { AuthServices } from '../../services/auth/auth-services';
 import { Router } from '@angular/router';
 import { InputComponent } from '../../components/input-component/input-component';
 import { ButtonComponent } from '../../components/button-component/button-component';
+import { UserLoginInterface } from '../../interfaces/loginInterfaces/userLoginInterface';
 
 @Component({
   selector: 'app-login-client-page',
@@ -11,17 +12,19 @@ import { ButtonComponent } from '../../components/button-component/button-compon
   styleUrl: './login-client-page.css',
 })
 export class LoginClientPage {
-  public email: string = '';
-  public password: string = '';
+  public userLogin: UserLoginInterface = {
+    email: '',
+    password: ''
+  }
 
   constructor(private authService: AuthServices, private router: Router) {}
 
   public Login(): void{
-    if(this.email === '' || this.password === ''){
+    if(this.userLogin.email === '' || this.userLogin.password === ''){
       alert("Todos os campos devem estar preenchidos!");
       return;
     }
-    this.authService.login(this.email, this.password).subscribe(response => {
+    this.authService.login(this.userLogin.email, this.userLogin.password).subscribe(response => {
       if(response.status){
         localStorage.setItem("user", JSON.stringify(response.data));
         this.router.navigate(['/home']);

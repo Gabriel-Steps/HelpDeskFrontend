@@ -7,12 +7,12 @@
             type="email" 
             placeholder="Digite o seu e-mail" 
             icon="assets/envelope.png"
-            [(value)]="email" />
+            [(value)]="userLogin.email" />
             <app-input-component 
             type="password" 
             placeholder="Digite a sua senha" 
             icon="assets/key.png"
-            [(value)]="password" />
+            [(value)]="userLogin.password" />
             <p>Não tem uma conta? <a (click)="redirecionarParaRegister()">Cadastre-se</a></p>
         </div>
         <div class="div-container-buttons">

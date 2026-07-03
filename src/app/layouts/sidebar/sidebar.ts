@@ -35,6 +35,8 @@ export class Sidebar {
 
   public logout(): void {
     localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    localStorage.removeItem("imageUrl");
     this.router.navigate(['/login']);
   }
 

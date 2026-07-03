@@ -5,6 +5,7 @@ import { AuthServices } from '../../services/auth/auth-services';
 import { Router } from '@angular/router';
 import { PreviewImagePerfilUserComponent } from '../../components/preview-image-perfil-user-component/preview-image-perfil-user-component';
 import { UserRegisterInterface } from '../../interfaces/registerInterfaces/userRegisterInterface';
+import { ProfileImageServices } from '../../services/profileImage/profile-image-services';
 
 @Component({
   selector: 'app-register-client-page',
@@ -23,9 +24,12 @@ export class RegisterClientPage {
   public selectedFile: File | null = null;
   public previewUrl: string | null = "assets/user-no-pic.png";
 
-  constructor(private authService: AuthServices, private router: Router, private cdr: ChangeDetectorRef) {}
+  constructor(private authService: AuthServices,
+  private router: Router, 
+  private cdr: ChangeDetectorRef,
+  private profileImageServices: ProfileImageServices) {}
 
-  public Register(): void{
+  public async Register(): Promise<void>{
     if(this.userRegister.password !== this.userRegister.confirmPassword){
       alert("As senhas estão diferentes!");
       return;
@@ -41,10 +45,16 @@ export class RegisterClientPage {
       this.userRegister.email, 
       this.userRegister.password, "Cliente")
       .subscribe(response => {
-      if(response.status){
-        localStorage.setItem("user", response.data);
-        this.router.navigate(['/home']);
-    }
+      if(response.status && this.selectedFile){
+        localStorage.setItem("user", JSON.stringify(response.data));
+        localStorage.setItem('token', response.data.token);
+        this.profileImageServices.uploadProfileImage(this.selectedFile)
+        .subscribe(responseImage => {
+          if(responseImage.status){
+            this.router.navigate(['/home']);
+          }
+        })
+      }
     })
   }
 
@@ -73,7 +83,6 @@ export class RegisterClientPage {
       reader.onload = (e) => {
         this.previewUrl = e.target?.result as string;
         this.cdr.detectChanges();
-
       };
       reader.readAsDataURL(file);
     }

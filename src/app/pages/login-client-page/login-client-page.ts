@@ -27,6 +27,7 @@ export class LoginClientPage {
     this.authService.login(this.userLogin.email, this.userLogin.password).subscribe(response => {
       if(response.status){
         localStorage.setItem("user", JSON.stringify(response.data));
+        localStorage.setItem('token', response.data.token);
         this.router.navigate(['/home']);
       }
     })

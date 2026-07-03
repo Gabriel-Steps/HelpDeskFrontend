@@ -3,13 +3,14 @@
     icon="assets/text.png"
     type="text"
     placeholder="Digite o título do chamado"
-    [(value)]="createCalled.title"/>
+    [(value)]="createCalledModel.title"/>
     <app-input-component 
     icon="assets/poll-h.png"
     type="text"
     placeholder="Digite a descrição do chamado"
-    [(value)]="createCalled.description"/>
+    [(value)]="createCalledModel.description"/>
     <div class="div-container-rodape">
-    
+        <app-button-component text="Cancelar" type="primary" (onClick)="onClosedModal(); clearInputs()"/>
+        <app-button-component text="Adicionar" type="secondary" (onClick)="registerCalled()"/>
     </div>
 </app-modal-component>

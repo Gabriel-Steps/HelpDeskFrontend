@@ -1,0 +1,34 @@
+<div class="div-container-card">
+    <div class="div-container-header">
+        <h1>{{calledModel.title}}</h1>
+        <app-card-satus-called-component [text]="getTextStatus()" [status]="getClassStatus()"/>
+    </div>
+    <div class="div-container-descricao">
+        {{calledModel.description}}
+    </div>
+    <img [src]="iconInfo"
+    alt="Ícone de abrir/fechar histórico" width="20"
+    (click)="switchStatusHistory()"
+    class="img-icon">
+    @if(openInfo){
+        <div class="div-container-info">
+            @if(loadingInfo){
+                <div class="div-container-loading">
+                    <img src="gifs/loading.gif" alt="Ícone de carregamento" width="50">
+                </div>
+            }@else {
+                <p>Data de criação: {{ convertDate() }}</p>
+                <p>Técnico: @if(calledModel.technicianId === null) { Nenhum }@else{ {{technician.name}} }</p>
+            }
+        </div>
+    }
+    <div class="div-container-footer">
+        <app-button-component text="Atualizar" type="primary" (onClick)="onSwitchModalUpdate()"/>
+        <app-button-component text="Remover" type="delete" icon="assets/trash.png" (onClick)="deleteCalled()"/>
+    </div>
+</div>
+
+<app-modal-update-called-component [dataModal]="calledModel" 
+[isOpen]="isOpenModalUpdate" 
+[onClosedModal]="onSwitchModalUpdate"
+[confirmAction]="onTrigger"/>

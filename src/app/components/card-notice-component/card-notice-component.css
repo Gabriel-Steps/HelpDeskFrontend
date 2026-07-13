@@ -1,0 +1,30 @@
+.div-container-notice{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.success{
+    background-color: #00FF00;
+    border: 1px solid #02e902;
+}
+
+.error{
+    background-color: #FF0000;
+    border: 1px solid #e90202;
+}
+
+.info{
+    background-color: #3030f5;
+    border: 1px solid #2c2cf8;
+}
+
+.warning{
+    background-color: #e9e901;
+    border: 1px solid #dada01;
+}

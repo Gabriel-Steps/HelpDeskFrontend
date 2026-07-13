@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
 
-import { UserViewModelInterface } from '../../interfaces/authInterfaces/userVIewModelInterface';
+import { AuthViewModelInterface } from '../../interfaces/authInterfaces/authVIewModelInterface';
 import { ApiResponseInterface } from '../../interfaces/apiResponseInterfaces/apiResponseAuthInterface';
 
 @Injectable({
@@ -51,7 +51,7 @@ export class ProfileImageServices {
       return throwError(() => new Error('Usuário não encontrado.'));
     }
 
-    const user: UserViewModelInterface = JSON.parse(userString);
+    const user: AuthViewModelInterface = JSON.parse(userString);
 
     return this.http.post<ApiResponseInterface<object>>(
       `${this.API}/profile-image/register-image`,

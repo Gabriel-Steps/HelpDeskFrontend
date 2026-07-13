@@ -19,7 +19,7 @@ export class ModalComponent {
 
   fechar() {
     if (this.onclosed) {
-      this.onclosed(); // A função só é executada de fato aqui!
+      this.onclosed();
     }
   }
 }

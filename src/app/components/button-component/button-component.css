@@ -63,3 +63,22 @@ button{
     cursor: pointer;
     transition: 0.2s;
 }
+
+.delete{
+    background-color: #FF0000;
+    border: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.1rem;
+    border-radius: 10px;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.delete:hover{
+    background-color: #e60000;
+    box-shadow: 1px 1px 5px #8a0101dc;
+    cursor: pointer;
+    transition: 0.3s;
+}

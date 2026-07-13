@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './input-component.html',
   styleUrl: './input-component.css',
 })
-export class InputComponent {
+export class InputComponent implements OnInit{
   @Input() icon: string = '';
   @Input() placeholder: string = '';
   @Input() type: string = 'text';

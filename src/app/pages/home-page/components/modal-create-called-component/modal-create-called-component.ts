@@ -33,14 +33,14 @@ export class ModalCreateCalledComponent {
       this.createCalledModel.title, 
       this.createCalledModel.description)
       .subscribe(response => {
-        if(response.status)
+        if(response.status){
           alert("Chamado criado com sucesso!");
-        else{
+          this.clearInputs();
+          this.confirmAction();
+          this.onClosedModal();
+        }else{
           alert("Houve um erro ao criar o chamado!");
         }
     });
-    this.clearInputs();
-    this.confirmAction;
-    this.onClosedModal;
   }
 }

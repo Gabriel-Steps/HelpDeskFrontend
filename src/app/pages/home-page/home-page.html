@@ -3,14 +3,15 @@
         <p>Seja Bem-vindo(a), <b>{{usuario.name}}!</b></p>
     </div>
     <div class="div-container-button-add">
-        <p>Dados chamados:</p>
         <div class="div-containter-btn">
             <app-button-component text="ADICIONAR" type="secondary" (onClick)="invertIsOpenModalCreateCalled()"/>
         </div>
     </div>
+    <div class="div-container-calleds">
+        @for( called of listCalleds; track called.id ){
+            <app-card-called-component [calledModel]="called" [onTrigger]="getAllCalledsByUserId"/>
+        }
+    </div>
 </div>
-<!-- <app-modal-component [isOpen]="isOpenModalCreateCalled" (onClosed)="invertIsOpenModalCreateCalled()" title="Criar chamado">
-    <p>Ola mundo</p>
-</app-modal-component> -->
 
-<app-modal-create-called-component [isOpen]="isOpenModalCreateCalled" [onClosedModal]="invertIsOpenModalCreateCalled" />
+<app-modal-create-called-component [isOpen]="isOpenModalCreateCalled" [onClosedModal]="invertIsOpenModalCreateCalled" [confirmAction]="getAllCalledsByUserId"/>

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-type TypeButton = "primary" | "secondary" | "sidebar";
+type TypeButton = "primary" | "secondary" | "sidebar" | "delete";
 
 @Component({
   selector: 'app-button-component',
@@ -8,6 +8,7 @@ type TypeButton = "primary" | "secondary" | "sidebar";
   templateUrl: './button-component.html',
   styleUrl: './button-component.css',
 })
+
 export class ButtonComponent {
   @Input() text: string = "";
   @Input() type: TypeButton = "primary"

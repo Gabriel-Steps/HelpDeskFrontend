@@ -1,0 +1,22 @@
+.div-container-status{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.aberto{
+    background-color: #00ff00;
+}
+
+.andamento{
+    background-color: #ffff00;
+}
+
+.fechado{
+    background-color: #ff0000;
+}
